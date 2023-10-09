@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Manrope&display=swap');
+
+body{
+    background-color: #DEE4FF;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18;
+}
+
+p{
+    color: black;
+    line-height: 1.7em;
+}
+
+img{
+    max-width: 400px;
+}
+
+figcaption{
+    max-width: 400px;
+}
+
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 1.7em;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+ 
+h4 {
+    font-size: 1.1em;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding:0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    font-family: 'Manrope', sans-serif;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+nav u li a:link {
+    color: black;
+}
+
+nav u li a:visited {
+    color: rgb(0, 0, 118);
+
+}
+
+nav u li a:hover {
+    color: rgb(65, 50, 96);
+    background-color: black;
+
+}
+
+nav ul li a:active {
+    color: rgb(111, 0, 97);
+}
