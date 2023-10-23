@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Manrope&display=swap');
 
 body{
-    background-color: #f3c8d1;
+    background-color: #f7fff7;
     font-family: 'Manrope', sans-serif;
     font-size: 18;
 }
@@ -112,7 +112,7 @@ abbr{
     text-decoration-style: dotted;
 }
 mark{
-    background: rgb(0, 255, 0);
+    background: rgb(255, 115, 239);
 }
 
 input:focus {
