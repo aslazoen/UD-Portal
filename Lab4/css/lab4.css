@@ -188,4 +188,15 @@ and (max-width: 640px) {
         "nav1"
         "footer1";
     }
+    nav ul {
+        flex-flow: column nowrap;
+        text-align: center;
+      }
+    nav ul li a {
+        display: block;
+        padding: 10px 5px;
+        margin: 5px;
+        border: 1px black solid;
+        background: white;
+    }
 }
