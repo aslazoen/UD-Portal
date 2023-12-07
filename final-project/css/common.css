@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Roboto&display=swap');
+
+/* css reset */
+*, 
+*:before, 
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+
+body{
+    background-color: #dfe0e4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18;
+}
+
+img{
+    max-width: 400px;
+}
+
+figcaption{
+    max-width: 400px;
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 700;
+}
+
+h1, 
+h2, 
+h3,
+h4{
+    padding: .2em 0;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.2em;
+}
+ 
+h4 {
+    font-size: 1.1em;
+}
+
+p{
+    margin: 1em 0;
+    line-height: 1.5em;
+}
+
+header{
+    font-size: 2em;
+}
+
+header, 
+footer {
+    color: rgb(50, 58, 96);
+}
+
+aside {
+    color: white;
+}
+
+section, 
+figure {
+    margin: 1em 1em 0 0;
+    border-radius: 10px;
+    background-color: white;
+}
+
+header, 
+nav,
+aside, 
+section,
+figure,
+footer {
+    padding:  1em 1em 1em 1em;
+}
+
+header, footer {
+    text-align: center;
+}
+
+input:focus {
+    background: black;
+    color: white;
+    border: 4px solid yellow;
+
+}
+
+input:invalid {
+    border: 1px dotted red;
+}
+
+label
+{
+    display: block;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+
+/*will target any field that is not submit and is valid*/
+input:not([type="submit"]):valid {
+    border-color: #03a964;
+    box-shadow: 0 0 3px #03a964;
+}
+
+/* Hide and show list of inputRequirements when interacting with input */
+input:not([type="submit"]) + .inputRequirements {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 1s ease-out;
+}
+
+input:not([type="submit"]):hover + .inputRequirements,
+input:not([type="submit"]):focus + .inputRequirements,
+input:not([type="submit"]):active + .inputRequirements {
+    max-height: 1000px; /* any large number (bigger then the .inputRequirements list) */
+    transition: max-height 1s ease-in;
+}
+
+table, th, td {
+    border-collapse: collapse;
+}
+table{
+    margin-bottom: 30px;
+}
+th {
+    color: white;
+    background-color: rgb(74, 82, 127);
+}
+th, td {
+    border: 3px solid rgb(50, 58, 96);
+    padding: 1em;
+    text-align: left;
+}
+caption{
+    padding: 0 0 1em 0;
+}
+
+.skip-link{
+    background: white;
+    color: #000;
+    font-weight: 700px;
+    padding: 4px;
+    position: absolute;
+    transform: translateY(-200%);
+}
+
+.skip-link:focus{
+    transform: translateY(0%);
+}
+
+.skip-link {
+    transition: transform 0.3s;
+}
+
+.sr-only {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding:0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.selected {
+    color: white;
+    background-color: rgb(50, 58, 96);
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+nav ul li{
+    list-style: none;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: rgb(50, 58, 96);
+    padding: 1em 5em;
+    border: 2px rgb(50, 58, 96) solid;
+}
+
+ul{
+    padding: 1em 1em 1em 1em;
+}
+
+a:link {
+    color: rgb(159, 63, 4);
+}
+
+a:visited {
+    color: rgb(101, 45, 8);
+}
+
+a:hover {
+    color: black;
+    background-color:  rgb(124, 168, 229);
+
+}
+
+a:active {
+    color:  rgb(50, 58, 96);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #dfe0e4;
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    display: grid;
+}
+
+header{grid-area: header1; background: #dfe0e4;}
+nav{grid-area: nav1; background: #dfe0e4;}
+main{grid-area: main1; background: #dfe0e4; max-height: 100%;}
+aside{grid-area: aside1; background: rgb(50, 58, 96)}
+footer{grid-area: footer1; background: #dfe0e4;}
+
+
+@media screen
+and (max-width: 640px) {
+    nav ul {
+        flex-flow: column nowrap;
+        text-align: center;
+    }
+    
+    nav ul li {
+        margin: 0.3em 0;
+    }
+
+    nav ul li a {
+        display: block;
+    }
+}
