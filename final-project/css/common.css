@@ -25,6 +25,17 @@ figcaption{
     max-width: 400px;
 }
 
+pre{
+    max-width: 500px;
+    padding: 1em;
+    border: 1px solid black;
+}
+
+code{
+    display: block;
+    overflow: auto;
+}
+
 h1, 
 h2, 
 h3, 
