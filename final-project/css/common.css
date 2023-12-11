@@ -26,14 +26,13 @@ figcaption{
 }
 
 pre{
-    max-width: 500px;
     padding: 1em;
     border: 1px solid black;
 }
 
 code{
     display: block;
-    overflow: auto;
+    white-space: pre-wrap;
 }
 
 h1, 
@@ -207,7 +206,7 @@ nav ul li{
     font-size: 1.8em;
     font-weight: 600;
     color: rgb(50, 58, 96);
-    padding: 1em 5em;
+    padding: 1em 2em;
     border: 2px rgb(50, 58, 96) solid;
 }
 
@@ -265,7 +264,12 @@ a:active {
 }
 
 main {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #dfe0e4;
     display: grid;
+    width: auto;
+    height: auto;
 }
 
 header{grid-area: header1; background: #dfe0e4;}
@@ -288,5 +292,9 @@ and (max-width: 640px) {
 
     nav ul li a {
         display: block;
+    }
+
+    section, figure {
+        margin: 1em;
     }
 }
