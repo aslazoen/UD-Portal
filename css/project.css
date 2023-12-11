@@ -137,14 +137,14 @@ nav ul li a:active {
 
 header{grid-area: header1; background: #5f4c81;}
 nav{grid-area: nav1; background: #ffb375;}
-figure{grid-area:fig1; background: #FFDDEB;}
 main{grid-area:main1; background: #FFDDEB; max-height: 100%;}
 footer{grid-area: footer1; background: #5f4c81;}
-#about{grid-area:sec1; background: #FFDDEB;}
-#lab2{grid-area:sec2; background: #FFDDEB;}
-#lab3{grid-area:sec3; background: #FFDDEB;}
-#lab4{grid-area:sec4; background: #FFDDEB;}
-#profile{grid-area:fig1; background: #FFDDEB;}
+#intro{grid-area:sec1; background: #FFDDEB;}
+#results{grid-area:sec2; background: #FFDDEB;}
+#importance{grid-area:sec3; background: #FFDDEB;}
+#data-table{grid-area:fig1; background: #FFDDEB;}
+#result-table{grid-area:fig2; background: #FFDDEB;}
+#cat{grid-area:fig3; background: #FFDDEB;}
 
 nav ul {
     display: flex;
@@ -164,24 +164,6 @@ nav ul li a {
     font-size: 1.2em;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    background: rgb(175, 222, 176);
-    display: grid;
-    width: 100vw;
-    height: 100vh;
-    grid-template-columns: 
-    1fr 2fr;
-    grid-template-areas: 
-    "header1 header1"
-    "nav1 nav1"
-    "main1 main1"
-    "main1 main1"
-    "main1 main1"
-    "footer1 footer1";
-}
-
 main {
     max-width: 100%;
     margin: 0 auto;
@@ -192,10 +174,29 @@ main {
     grid-template-columns: 
     1fr 1fr;
     grid-template-areas: 
-    "fig1 sec1"
+    "sec1 sec1"
+    "fig1 fig1"
     "sec2 sec2"
-    "sec3 sec3"
-    "sec4 sec4";
+    "fig2 fig2"
+    "sec3 fig3";
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgb(175, 222, 176);
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-columns: 
+    1fr 1fr;
+    grid-template-areas: 
+    "header1 header1"
+    "nav1 nav1"
+    "main1 main1"
+    "main1 main1"
+    "main1 main1"
+    "footer1 footer1";
 }
 
 @media screen and (min-width: 641px)
@@ -213,10 +214,11 @@ and (max-width: 900px) {
         grid-template-columns: 
         1fr 1fr;
         grid-template-areas: 
-        "fig1 sec1"
+        "sec1 sec1"
+        "fig1 fig1"
         "sec2 sec2"
-        "sec3 sec3"
-        "sec4 sec4";
+        "fig2 fig2"
+        "sec3 fig3";
     }
 }
 
@@ -234,11 +236,12 @@ and (max-width: 640px) {
         grid-template-columns: 
         1fr;
         grid-template-areas: 
-        "fig1"
         "sec1"
+        "fig1"
         "sec2"
+        "fig2"
         "sec3"
-        "sec4";
+        "fig3";
     }
     nav ul {
         flex-flow: column nowrap;
