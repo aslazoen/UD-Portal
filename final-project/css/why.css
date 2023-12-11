@@ -13,13 +13,16 @@ main{
     grid-template-areas: 
     "sec1 sec1"
     "fig1 fig2"
-    "sec2 sec2";
+    "sec2 fig3"
+    "sec3 sec3";
 }
 
-#sec1{grid-area:sec1; background: #ffffff;}
-#sec2{grid-area:sec2; background: #ffffff;}
+#intro{grid-area:sec1; background: #ffffff;}
+#population{grid-area:sec2; background: #ffffff;}
+#benefits{grid-area:sec3; background: #ffffff;}
 #fig1{grid-area: fig1; background: #ffffff;}
 #fig2{grid-area: fig2; background: #ffffff;}
+#fig3{grid-area: fig3; background: #ffffff;}
 
 @media screen and (min-width: 641px)
 and (max-width: 900px) {
@@ -36,7 +39,8 @@ and (max-width: 900px) {
         grid-template-areas: 
         "sec1 sec1"
         "fig1 fig2"
-        "sec2 sec2";
+        "sec2 fig3"
+        "sec3 sec3";
     }
 }
 
@@ -57,6 +61,8 @@ and (max-width: 640px) {
         "sec1"
         "fig1" 
         "fig2"
-        "sec2";
+        "sec2"
+        "fig3"
+        "sec3";
     }
 }

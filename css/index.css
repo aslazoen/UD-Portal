@@ -145,12 +145,13 @@ nav ul {
 
 nav ul li {
     list-style: none;
+    font-size: 1.2em;
 }
 
 nav ul li a {
     font-family: 'Manrope', sans-serif;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 .container{

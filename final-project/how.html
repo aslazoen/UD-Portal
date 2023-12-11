@@ -22,45 +22,214 @@
             </ul>
         </nav>
         <main id="main-content">
-            <section id="sec1">
+            <section id="intro">
                 <h2>How to do Universal Design...</h2>
-                <p>Many simple adjustments can be easily implemented into your websites to make them universally accessible.</p>
+                <p>Many simple adjustments can be easily implemented into your websites to make them universally accessible. Keep reading to discover some of the most important changes you can make, along with code examples.</p>
             </section>
-            <section id="sec2">
+            <section id="semantic">
                 <h3>Semantic HTML</h3>
-                <p>Using HTML semantics can help...</p>
-                <code>
-                    header
-                </code>
+                <p>Many developers are taught to simply put different content into various div elements. However we should avoid the overuse of div elements, since this provides no further information to the user about what the purpose of the element is. Using semantic HTML, which includes tags such as header, nav, main, aside, figure, and more, gives the user much more context about what the function of the element is. The code sample below provides an example of using semantic HTML for a basic webpage:</p>
+
+                <pre> <!--for indenting-->
+                    <code>
+                        &lt;header&gt; The Main Title for the Page &lt;&#47;header&gt;
+                        &lt;nav&gt; 
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href = "#section-1"&gt;Section 1&lt;&#47;a&gt;&lt;&#47;li&gt;
+                                &lt;li&gt;&lt;a href = "#section-2"&gt;Section 2&lt;&#47;a&gt;&lt;&#47;li&gt;
+                            &lt;&#47;ul&gt;
+                        &lt;&#47;nav&gt;
+                        &lt;main&gt; 
+                            &lt;section id = "section-1"&gt;
+                                &lt;figure&gt;
+                                    &lt;img src = "img_source.jpg" alt="Description of image."&gt;
+                                &lt;&#47;figure&gt;
+                            &lt;&#47;section&gt;
+                            &lt;section id = "section-2"&gt;
+                                &lt;p&gt;
+                                    This is all about the second topic...
+                                &lt;&#47;p&gt;
+                            &lt;&#47;section&gt;
+                        &lt;&#47;main&gt;
+                    </code>
+                </pre>
             </section>
-            <section id="sec3">
+            <section id="skip-nav">
                 <h3>Skip Navigation</h3>
-                <p>It can be irritating if a user must listen to the entire navigation menu contents everytime they switch to a new page. To solve this problem, we can use a "Skip Navigation" button that moves the user down the page right to the main content.</p>
+                <p>It can be irritating if a user must listen to the entire navigation menu contents everytime they switch to a new page. To solve this problem, we can use a "Skip Navigation" button that pops up before the naviagation, which moves the user down the page right to the main content when clicked.</p>
+
+                <p>Below is example HTML code for creating a skip navigation button, to move the user down to the main site content:</p>
+                <pre> <!--for indenting-->
+                    <code>
+                        
+                        &lt;a class= "skip-link" href="#main-content"&gt;Skip to main content.&lt;&#47;a&gt;
+                        &lt;header&gt; The Main Title for the Page &lt;&#47;header&gt;
+                        &lt;nav&gt; 
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href = "#section-1"&gt;Section 1&lt;&#47;a&gt;&lt;&#47;li&gt;
+                                &lt;li&gt;&lt;a href = "#section-2"&gt;Section 2&lt;&#47;a&gt;&lt;&#47;li&gt;
+                            &lt;&#47;ul&gt;
+                        &lt;&#47;nav&gt;
+                        &lt;main id="main-content"&gt; 
+                            &lt;section id = "section-1"&gt;
+                                &lt;figure&gt;
+                                    &lt;img src = "img_source.jpg" alt="Description of image."&gt;
+                                &lt;&#47;figure&gt;
+                            &lt;&#47;section&gt;
+                            &lt;section id = "section-2"&gt;
+                                &lt;p&gt;
+                                    This is all about the second topic...
+                                &lt;&#47;p&gt;
+                            &lt;&#47;section&gt;
+                        &lt;&#47;main&gt;
+                    </code>
+                </pre>
+
+                <p>Below is example CSS code for creating a skip navigation button, which moves it in and out of sight:</p>
+                <pre> <!--for indenting-->
+                    <code>
+                        .skip-link&lcub;
+                            background: white;
+                            color: #000;
+                            font-weight: 700px;
+                            padding: 4px;
+                            position: absolute;
+                            transform: translateY(-200%);
+                        &rcub;
+                        
+                        .skip-link:focus&lcub;
+                            transform: translateY(0%);
+                        &rcub;
+                        
+                        .skip-link&lcub;
+                            transition: transform 0.3s;
+                        &rcub;
+                    </code>
+                </pre>
             </section>
-            <section id="sec4">
+            <section id="sr">
                 <h3>Screen-reader Only</h3>
-                <p>...</p>
+                <p>Elements should never remain untitled, however, there are elements that could be clear to sighted users but perhaps be confusing for those using a screen-reader. One example is the main site navigation. We can provide a label for screen-reader users without making it visible by using a screen-reader only class with CSS.</p>
+
+                <p>Below is example HTML code for creating a screen-reader only title for the main navigation:</p>
+                <pre> <!--for indenting-->
+                    <code>
+                        &lt;nav&gt; 
+                            &lt;h2 class="sr-only"&gt;Main Navigation&lt;&#47;h2&gt;
+                            &lt;ul&gt;
+                                &lt;li&gt;&lt;a href = "#section-1"&gt;Section 1&lt;&#47;a&gt;&lt;&#47;li&gt;
+                                &lt;li&gt;&lt;a href = "#section-2"&gt;Section 2&lt;&#47;a&gt;&lt;&#47;li&gt;
+                            &lt;&#47;ul&gt;
+                        &lt;&#47;nav&gt;
+                    </code>
+                </pre>
+
+                <p>Below is example CSS code for the screen-reader only class:</p>
+                <pre> <!--for indenting-->
+                    <code>
+                        .sr-only&lcub;
+                            border: 0;
+                            clip: rect(0,0,0,0);
+                            height: 1px;
+                            margin: -1px;
+                            overflow: hidden;
+                            padding:0;
+                            position: absolute;
+                            white-space: nowrap;
+                            width: 1px;
+                        &rcub;
+                    </code>
+                </pre>
             </section>
-            <section id="sec4">
+            <section id="forms">
                 <h3>Accessible Forms</h3>
-                <p>...</p>
+                <p>Forms should be made accessible to all users. By using labels for each field, it's easy for users to identify what input is needed and easily navigate to that field. Any specific constraints or formatting should be clearly outlined, and required fields should not allow submitting if they're blank. Forms should not have a time limit, allowing each user to go at their own comfortable pace. Below is an example of an accessibly structured HTML form:</p>
+                
+                <pre> <!--for indenting-->
+                    <code>
+                        &lt;form id="myform" method="post"&gt; 
+                        &lt;fieldset&gt;
+                            &lt;legend&gt;Fill out this form.&lt;&#47;legend&gt;
+                            &lt;label for="name"&gt;
+                                What is your name? *required
+                                &lt;inout type="text" id="name" required&gt;
+                            &lt;&#47;label&gt;
+                            &lt;label for="your-email"&gt;
+                                What is your email? *required
+                                &lt;inout type="email" id="your-email" placeholder="email@gmail.com" required&gt;
+                            &lt;&#47;label&gt;
+                            &lt;label for="phone"&gt;
+                                What is your phone number? *required
+                                &lt;inout type="tel" id="phone" minlength="7"&gt;
+                            &lt;&#47;label&gt;
+                            &lt;input type="submit" value="Submit"&gt;
+                        &lt;&#47;fieldset&gt;
+                    </code>
+                </pre>
             </section>
-            <section id="sec4">
+            <section id="tables">
                 <h3>Accessible Tables</h3>
-                <p>...</p>
+                <p>When navigating tables with a screen-reader, it can be very easy to get lost and not know where in the table you are. In order to fix this issue, tables should indicate headers and their scopes, and separately define data cells. Including a caption will make it clear what the table content is about. Below is an example of an accessibly designed table:</p>
+
+                <pre> <!--for indenting-->
+                    <code>
+                        &lt;table&gt; 
+                            &lt;caption&gt;Describe your table.&lt;&#47;caption&gt;
+                            &lt;thead&gt; 
+                                &lt;tr&gt; 
+                                    &lt;th scope="col"&gt;Column 1&lt;&#47;th&gt;
+                                    &lt;th scope="col"&gt;Column 2&lt;&#47;th&gt;
+                                    &lt;th scope="col"&gt;Column 3&lt;&#47;th&gt;
+                                &lt;&#47;tr&gt;
+                            &lt;&#47;thead&gt;
+                            &lt;tbody&gt; 
+                                &lt;tr&gt; 
+                                    &lt;td&gt;Row 1, Column 1 data&lt;&#47;td&gt;
+                                    &lt;td&gt;Row 1, Column 2 data&lt;&#47;td&gt;
+                                    &lt;td&gt;Row 1, Column 3 data&lt;&#47;td&gt;
+                                &lt;&#47;tr&gt;
+                                &lt;tr&gt; 
+                                    &lt;td&gt;Row 2, Column 1 data&lt;&#47;td&gt;
+                                    &lt;td&gt;Row 2, Column 2 data&lt;&#47;td&gt;
+                                    &lt;td&gt;Row 2, Column 3 data&lt;&#47;td&gt;
+                                &lt;&#47;tr&gt;
+                            &lt;&#47;tbody&gt;
+                        &lt;&#47;table&gt;
+                    </code>
+                </pre>
             </section>
-            <section id="sec4">
+            <section id="mobile">
                 <h3>Mobile-First Development</h3>
-                <p>...</p>
+                <p>With so many people accessing the web through their mobile devices, making your website accessible and usable on a mobile device should be a consideration from the beginning, not an afterthought. Beyond making sure website content is readable and formatted well across all size screens, certain functions like hover aren't visible on mobile devices, so it's crucial to not have that signal any important functionality. Making sure that navigation menus are clearly displayed in a format that is large enough to easily click and navigate on a phone screen for different mobility levels is another important consideration. Below is sample CSS code to make your horizontal navigation transform to a stacked, easily "thumb-able" format instead when the screen size is small:</p>
+
+                <pre> <!--for indenting-->
+                    <code>
+                        @media screen and (max-width: 640px)&lcub;
+                            nav ul&lcub;
+                                flex-flow: column nowrap;
+                                text-align: center;
+                            &rcub;
+                            
+                            nav ul li&lcub;
+                                margin: 0.3em 0;
+                            &rcub;
+
+                            nav ul li a&lcub;
+                                display: block;
+                            &rcub;
+                        &rcub;
+                    </code>
+                </pre>
             </section>
 
         </main>
         <aside>
             <h2>Resources</h2>
+            <p>There's always more to learn about universal design. Check out some of these resources to continue expanding your knowledge and aid in developing universally accessible sites!</p>
             <ul>
-                <li>list item</li>
-                <li>list item</li>
-                <li>list item</li>
+                <li><a href="https://www.w3.org/WAI/">World Wide Web Consortium Web Accessibility Initiative</a></li>
+                <li><a href="https://validator.nu">Nu HTML Validator</a></li>
+                <li><a href="resources/UD 4 Digital Media.pdf">Universal Design for Digital Media by Howard Kramer</a></li>
             </ul>
         </aside>
         <footer>

@@ -200,8 +200,30 @@ nav ul li{
     border: 2px rgb(50, 58, 96) solid;
 }
 
+aside ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+aside ul li{
+    list-style: none;
+    font-size: 1em;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    padding: 1em;
+}
+
+aside ul li a:link{
+    color: white;
+}
+
+aside ul li a:visited{
+    color: #dfe0e4;
+}
+
 ul{
-    padding: 1em 1em 1em 1em;
+    padding: 1em;
 }
 
 a:link {
