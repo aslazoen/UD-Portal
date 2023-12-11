@@ -148,7 +148,7 @@ table, th, td {
 table{
     margin-bottom: 30px;
     display: block;
-    max-width: 95%;
+    max-width: 100%;
     overflow: auto;
 }
 th {
