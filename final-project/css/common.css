@@ -18,11 +18,11 @@ body{
 }
 
 img{
-    max-width: 400px;
+    max-width: 100%;
 }
 
 figcaption{
-    max-width: 400px;
+    max-width: 100%;
 }
 
 pre{
@@ -33,6 +33,10 @@ pre{
 code{
     display: block;
     white-space: pre-wrap;
+}
+
+table {
+    display: block;
 }
 
 h1, 
