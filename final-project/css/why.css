@@ -37,12 +37,12 @@ and (max-width: 900px) {
     main{
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-template-areas: 
-        "sec1 sec1"
-        "fig1 fig1"
-        "fig2 fig2"
-        "sec2 sec2"
-        "fig3 fig3"
-        "sec3 sec3";
+        "sec1"
+        "fig1"
+        "fig2"
+        "sec2"
+        "fig3"
+        "sec3";
     }
 }
 
