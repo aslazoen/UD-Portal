@@ -22,11 +22,11 @@ p{
 }
 
 img{
-    max-width: 400px;
+    max-width: 100%;
 }
 
 figcaption{
-    max-width: 400px;
+    max-width: 100%;
 }
 
 h1, 
@@ -72,6 +72,7 @@ footer {
 header, 
 nav, 
 main, 
+figure,
 aside, 
 footer {
     padding: 1.5em;
@@ -132,7 +133,7 @@ nav ul li a:active {
 
 header{grid-area: header1; background: #5f4c81;}
 nav{grid-area: nav1; background: #ffb375;}
-aside{grid-area:aside1; background: #FFDDEB;}
+figure{grid-area:fig1; background: #FFDDEB;}
 main{grid-area:main1; background: #FFDDEB; max-height: 100%;}
 footer{grid-area: footer1; background: #5f4c81;}
 
@@ -170,9 +171,9 @@ nav ul li a {
     grid-template-areas: 
     "header1 header1"
     "nav1 nav1"
-    "aside1 main1"
-    "aside1 main1"
-    "aside1 main1"
+    "fig1 main1"
+    "fig1 main1"
+    "fig1 main1"
     "footer1 footer1";
 }
 
@@ -183,7 +184,7 @@ and (max-width: 900px) {
         grid-template-areas: 
         "header1 header1"
         "nav1 nav1"
-        "aside1 main1"
+        "fig1 main1"
         "footer1 footer1";
     }
 }
@@ -194,7 +195,7 @@ and (max-width: 640px) {
         grid-template-columns: 1fr;
         grid-template-areas: 
         "header1"
-        "aside1"
+        "fig1"
         "main1"
         "nav1"
         "footer1";
