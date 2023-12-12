@@ -141,9 +141,7 @@ figure{grid-area:fig1; background: #FFDDEB;}
 main{grid-area:main1; background: #FFDDEB; max-height: 100%;}
 footer{grid-area: footer1; background: #5f4c81;}
 #about{grid-area:sec1; background: #FFDDEB;}
-#lab2{grid-area:sec2; background: #FFDDEB;}
-#lab3{grid-area:sec3; background: #FFDDEB;}
-#lab4{grid-area:sec4; background: #FFDDEB;}
+#labs{grid-area:sec2; background: #FFDDEB;}
 #profile{grid-area:fig1; background: #FFDDEB;}
 
 nav ul {
@@ -172,7 +170,7 @@ nav ul li a {
     width: 100vw;
     height: 100vh;
     grid-template-columns: 
-    1fr 2fr;
+    1fr 1fr;
     grid-template-areas: 
     "header1 header1"
     "nav1 nav1"
@@ -193,9 +191,7 @@ main {
     1fr 1fr;
     grid-template-areas: 
     "fig1 sec1"
-    "sec2 sec2"
-    "sec3 sec3"
-    "sec4 sec4";
+    "sec2 sec2";
 }
 
 @media screen and (min-width: 641px)
@@ -214,9 +210,7 @@ and (max-width: 900px) {
         1fr 1fr;
         grid-template-areas: 
         "fig1 sec1"
-        "sec2 sec2"
-        "sec3 sec3"
-        "sec4 sec4";
+        "sec2 sec2";
     }
 }
 
@@ -236,9 +230,7 @@ and (max-width: 640px) {
         grid-template-areas: 
         "fig1"
         "sec1"
-        "sec2"
-        "sec3"
-        "sec4";
+        "sec2";
     }
     nav ul {
         flex-flow: column nowrap;
