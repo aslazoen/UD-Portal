@@ -142,9 +142,9 @@ footer{grid-area: footer1; background: #5f4c81;}
 #intro{grid-area:sec1; background: #FFDDEB;}
 #results{grid-area:sec2; background: #FFDDEB;}
 #importance{grid-area:sec3; background: #FFDDEB;}
-#data-table{grid-area:fig1; background: #FFDDEB;}
-#result-table{grid-area:fig2; background: #FFDDEB;}
-#cat{grid-area:fig3; background: #FFDDEB;}
+#data-table{grid-area:fig1; background: #fff6fa;}
+#result-table{grid-area:fig2; background: #fff6fa;}
+#cat{grid-area:fig3; background: #fff6fa;}
 
 nav ul {
     display: flex;
@@ -252,6 +252,7 @@ and (max-width: 640px) {
         padding: 10px 5px;
         margin: 5px;
         border: 1px black solid;
-        background: white;
+        border-radius: 20px;
+        background: #fff;
     }
 }
